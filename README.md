@@ -6,7 +6,7 @@ Este repositorio contiene los ejercicios realizados como parte del proyecto de a
 
 | Módulo        | Ejercicios          |
 |---------------|---------------------|
-| [CPP Module 00]() | [ex00](), [ex01](), [ex02]()|
+| [CPP Module 00](https://github.com/Folkenciyo/T42---C-/tree/main/CPP%20Module%2000) | [ex00](https://github.com/Folkenciyo/T42---C-/tree/main/CPP%20Module%2000/ex00), [ex01](https://github.com/Folkenciyo/T42---C-/tree/main/CPP%20Module%2000/ex01), [ex02]()|
 | [CPP Module 01]() | [ex00](), [ex01](), [ex02](), [ex03](), [ex04]() |
 | [CPP Module 02]() | [ex00](), [ex01](), [ex02](), [ex03](), [ex04]() |
 | [CPP Module 03]() | [ex00](), [ex01](), [ex02](), [ex03](), [ex04]() |
