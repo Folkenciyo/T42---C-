@@ -28,8 +28,8 @@ class PhoneBook{
 		PhoneBook(void);
 		~PhoneBook(void);
 
-/* 		void	set_information(void);
-		void	get_information(void)const; */
+		void	set_information(void);
+		void	get_information(void)const;
 		void	show_instruction(void);
 };
 

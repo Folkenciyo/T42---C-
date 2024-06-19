@@ -31,20 +31,11 @@ class Contact{
 			DarkestSecret
 		};
 	public:
-		Contact(void);Contact::Contact()
-{
-	for (int i = FirstName; i <= DarkestSecret; i++)
-		this->_informations[i] = std::string();
-	return;
-}
-
-Contact::~Contact()
-{
-}
+		Contact(void);
 		~Contact(void);
 
-/* 		bool	set_contact();
-		void	get_contact(int index)const; */
+		bool	set_contact();
+		void	get_contact(int index)const;
 };
 
 #endif
