@@ -6,7 +6,7 @@
 /*   By: juguerre <juguerre@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 11:06:12 by juguerre          #+#    #+#             */
-/*   Updated: 2024/07/08 11:06:12 by juguerre         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:40:07 by juguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Weapon::Weapon(const std::string &type){
 
 //Destructor
 Weapon::~Weapon(){
-    std::cout << "Weapon " << this->type << " has been dropped" << std::endl;
+    std::cout << "\033[4;36mWeapon " << this->type << " has been dropped\033[0m" << std::endl;
 }
 
 //Getter

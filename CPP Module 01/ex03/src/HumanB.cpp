@@ -6,7 +6,7 @@
 /*   By: juguerre <juguerre@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 12:38:04 by juguerre          #+#    #+#             */
-/*   Updated: 2024/07/08 12:38:04 by juguerre         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:42:45 by juguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ HumanB::HumanB(std::string name)
     this->name = name;
     this->weapon = NULL;
     this->isWeapon = false;
-    std::cout << "HumanB " << this->name << " is born to kill and later being killed" << std::endl;
+    std::cout << "\033[0;95mHuman-B " << this->name << " is born to kill and later being killed\033[0m" << std::endl;
 }
 
 HumanB::~HumanB()
 {
-    std::cout << "HumanB " << this->name << " is dead" << std::endl;
+    std::cout << "\033[0;95mHuman-B " << this->name << " is dead\033[0m" << std::endl;
 }
 
 void HumanB::attack()
 {
     if (this->isWeapon == true)
-        std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+        std::cout << "\033[0;95m" << this->name << " attacks with their " << this->weapon->getType() << std::endl;
     else
-        std::cout << this->name << " attacks with their bare hands" << std::endl;
+        std::cout << "\033[0;95m" << this->name << " attacks with their bare hands" << std::endl;
 }
 
 void HumanB::setWeapon(Weapon &weapon)
