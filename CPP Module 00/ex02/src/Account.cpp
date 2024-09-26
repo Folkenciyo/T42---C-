@@ -6,7 +6,7 @@
 /*   By: juguerre <juguerre@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 18:24:13 by juguerre          #+#    #+#             */
-/*   Updated: 2024/06/20 18:24:13 by juguerre         ###   ########.fr       */
+/*   Updated: 2024/09/17 17:58:51 by juguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	Account::_displayTimestamp( void )
 	std::setfill('0') << std::setw(2) << timenow.tm_min <<
 	std::setfill('0') << std::setw(2) << timenow.tm_sec <<
 	"] ";
-	// Para hacer la comparativa 'make re && ./leak_information >my.log &&
+	// Para hacer la comparativa 'make re && ./leak_information > my.log &&
     // diff my.log 19920104_091532.log'
 }
 
@@ -72,7 +72,7 @@ Account::~Account(void)
 	std::endl;
 }
 
-// getter para el tolta de cuentas
+// getter para el total de cuentas
 int	Account::getNbAccounts( void )
 {
 	return (Account::_nbAccounts);

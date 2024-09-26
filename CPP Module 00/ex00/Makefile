@@ -31,7 +31,7 @@ CUT			=	\033[K
 
 #Sources
 
-SRC_FILES	=	megaphone
+SRC_FILES	=	Megaphone
 
 SRCS 		= 	$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -51,7 +51,7 @@ all: $(NAME)
 	@printf "$(GREEN)            |::.. . |::.. . |										  \n$(RESET)"
 	@printf "$(GREEN)            '-------'-------'							  			  \n$(RESET)"	
 	@printf "\n"
-	#font: cricket
+#font: cricket
 
 
 # compile the executable
