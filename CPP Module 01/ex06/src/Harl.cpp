@@ -34,13 +34,13 @@ void Harl::announce(std::string level)
 	int 		i;
 
 	i = 0;
-	while(i < 4)
+	while(i <= 4)
 	{
 		if (levels[i] == level)
 			break ;
 		i++;
 	}
-		std::cout << "level[" << i << "]" << levels[i] << std::endl;
+		std::cout << "level[" << i << "]" << levels[i] <<" :" << std::endl;
 	switch (i)
 	{
 	case 0:

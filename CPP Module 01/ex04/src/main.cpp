@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
     else {
         while (std::getline(file_in, buffer))
         {
-           buffer = replace_string(buffer, search, replace);
+            buffer = replace_string(buffer, search, replace);
             file_out << buffer << std::endl;
             if (file_in.peek() != EOF)
                 file_out << std::endl;

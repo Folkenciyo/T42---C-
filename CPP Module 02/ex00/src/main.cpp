@@ -39,6 +39,7 @@ In C++, fixed point numbers are not directly supported by the language, but you 
 int x = 1234; // represents 0.1234
 int y = 5678; // represents 0.5678
 int z = x + y; // represents 0.6912
+
 Floating point numbers are supported by the language using types such as float and double. These types store the number (called the mantissa or significand) and the position of the decimal point (called the exponent) separately in binary format. For example:
 
 float x = 3.14159; // stored as (1.570795 x 2^1) + (1 x 2^-20)
@@ -53,6 +54,7 @@ Fixed point numbers:
 Financial applications, such as accounting, banking, or taxation, where the exact representation of money values is important.
 Embedded systems, such as microcontrollers or digital signal processors, where speed, power consumption, and chip area are critical factors.
 Audio and video processing, such as compression, filtering, or mixing, where fixed point arithmetic can provide better performance and quality than floating point arithmetic.
+
 Floating point numbers:
 
 Scientific and engineering applications, such as physics, chemistry, biology, or astronomy, where very small or very large values need to be represented and manipulated.
@@ -60,12 +62,4 @@ Graphics and gaming applications, such as rendering, animation, or simulation, w
 Machine learning and artificial intelligence applications, such as neural networks, deep learning, or natural language processing, where floating point arithmetic can provide more flexibility and accuracy than fixed-point arithmetic.
 If you find any mistakes feel free to contact me through email: mabbas@students.42wolfsburg.de or slack “mabbas”
 
-Detailed Resources To Read:
-1. Floating point versus fixed point: what are the pros/cons? — Stack Overflow
-
-2: Fixed point vs Floating point number — Stack Overflow
-
-3: Difference Between Fixed Point and Floating Point — Pediaa.Com
-
-4: Fixed Point and Floating Point Number Representations
  */

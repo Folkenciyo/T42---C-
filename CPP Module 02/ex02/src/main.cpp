@@ -16,7 +16,7 @@
 
 int main( void ) 
 {
-	{
+/* 	{
 	Fixed a;
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
@@ -45,7 +45,7 @@ int main( void )
 	std::cout << Fixed::min(b, c) << std::endl;
 	std::cout << Fixed::max(b, c) << std::endl;
 	return 0;
-	}
+	} */
 	{
  	Fixed a;
  	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );

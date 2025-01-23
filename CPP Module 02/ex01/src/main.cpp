@@ -5,15 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juguerre <juguerre@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 18:43:05 by juguerre          #+#    #+#             */
-/*   Updated: 2024/09/19 18:43:06 by juguerre         ###   ########.fr       */
+/*   Created: 2025/01/22 10:50:22 by juguerre          #+#    #+#             */
+/*   Updated: 2025/01/22 10:50:22 by juguerre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
 
-#include "Harl.hpp"
+int main( void ) {
+	Fixed a;
+	Fixed const b( 10 );
+	Fixed const c( 42.42f );
+	Fixed const d( b );
 
-int main(void)
-{
-    
+	a = Fixed( 1234.4321f );
+
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+
+	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	
+	return 0;
 }
