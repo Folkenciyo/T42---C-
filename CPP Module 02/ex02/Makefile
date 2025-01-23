@@ -1,6 +1,6 @@
 
 # variables
-NAME = 
+NAME = Fixed
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -89,7 +89,7 @@ BG_HI_WHITE	=	\033[0;107m
 
 #Sources
 
-SRC_FILES	=	main
+SRC_FILES	=	main Fixed
 
 SRCS 		= 	$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -102,14 +102,14 @@ OBJF		=	.cache_exists
 all: $(NAME)
 	@printf "\n"
 	@printf "$(GREEN)             _______ _______            ___            __     __    \n$(RESET)"
-	@printf "$(GREEN).-----.--.--|   _   |   _   |   .-----.'  _|   .----._|  |_ _|  |_  \n$(RESET)"
-	@printf "$(GREEN)|  -__|_   _|.  |   |.  |   |   |  _  |   _|   |  __|_    _|_    _| \n$(RESET)"
-	@printf "$(GREEN)|_____|__.__|.  |   |.  |   |   |_____|__|     |____| |__|   |__|   \n$(RESET)"
-	@printf "$(GREEN)            |:  1   |:  1   |										  \n$(RESET)"
-	@printf "$(GREEN)            |::.. . |::.. . |										  \n$(RESET)"
-	@printf "$(GREEN)            '-------'-------'							  			  \n$(RESET)"	
+	@printf "$(GREEN).-----.--.--|   _   |       |   .-----.'  _|   .----._|  |_ _|  |_  \n$(RESET)"
+	@printf "$(GREEN)|  -__|_   _|.  |   |___|   |   |  _  |   _|   |  __|_    _|_    _| \n$(RESET)"
+	@printf "$(GREEN)|_____|__.__|.  |   |/  ___/  	|_____|__|     |____| |__|   |__|   \n$(RESET)"
+	@printf "$(GREEN)            |:  1   |:  1  \									   \n$(RESET)"
+	@printf "$(GREEN)            |::.. . |::.. . |									   \n$(RESET)"
+	@printf "$(GREEN)            '-------'-------'							  	       \n$(RESET)"	
 	@printf "\n"
-
+#font: cricket
 
 
 # compile the executable
@@ -148,5 +148,10 @@ fclean: clean
 # re rule
 re: fclean all
 
+git::
+	@git add .
+	@git commit -m "update"
+	@git push origin main
+
 #phony
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re git
