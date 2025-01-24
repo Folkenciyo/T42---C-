@@ -147,5 +147,10 @@ fclean: clean
 # re rule
 re: fclean all
 
+git:
+	@git add .
+	@git commit -m "update"
+	@git push orgin main
+
 #phony
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re git

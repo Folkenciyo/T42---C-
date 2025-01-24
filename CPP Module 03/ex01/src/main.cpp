@@ -17,14 +17,16 @@ int main(void)
 {
 	ClapTrap	Pistachu("\033[4;33mPistachu\033[0m");
 	ClapTrap	*Lagarmander = new ClapTrap("\033[4;31mLagarmander\033[0m");
-	ScavTrap	MuevoTwo("\033[35mMuevoTwe\033[0m");
+	ScavTrap	MuevoTwo("\033[35mMuevoTwo\033[0m");
 
-	Pistachu.attack("\033[35mMuevoTwe\033[0m");
+	Pistachu.attack("\033[35mMuevoTwo\033[0m");
 	MuevoTwo.takeDamage(Pistachu.getAttackDamage());
 	MuevoTwo.beRepaired(18);
 	MuevoTwo.guardGate();
 	MuevoTwo.attack("\033[4;31mLagarmander\033[0m");
 	Lagarmander->takeDamage(MuevoTwo.getAttackDamage());
+	Lagarmander->beRepaired(2);
+	Lagarmander->~ClapTrap();
 
 	return 0;
 }
