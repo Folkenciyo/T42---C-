@@ -133,7 +133,7 @@ $(OBJF):
 clean:
 	@if [ -d "$(OBJ_DIR)" ]; then \
 	rm -rf $(OBJ_DIR); \
-	echo "$(BLUE)Deleting all objects from /ex00...$(RESET)"; else \
+	echo "$(BLUE)Deleting all objects from /ex02...$(RESET)"; else \
 	echo "No objects to remove from /ex02."; \
 	fi;
 

@@ -1,6 +1,6 @@
 
 # variables
-NAME = fixed
+NAME = Animal
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -89,7 +89,7 @@ BG_HI_WHITE	=	\033[0;107m
 
 #Sources
 
-SRC_FILES	=	main Fixed
+SRC_FILES	=	main Animal Dog Cat WrongAnimal WrongCat WrongDog
 
 SRCS 		= 	$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -148,10 +148,5 @@ fclean: clean
 # re rule
 re: fclean all
 
-git::
-	@git add .
-	@git commit -m "update"
-	@git push origin main
-
 #phony
-.PHONY: all clean fclean re git
+.PHONY: all clean fclean re

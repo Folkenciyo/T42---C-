@@ -138,7 +138,7 @@ $(OBJF):
 clean:
 	@if [ -d "$(OBJ_DIR)" ]; then \
 	rm -rf $(OBJ_DIR); \
-	echo "$(BLUE)Deleting all objects from /ex00...$(RESET)"; else \
+	echo "$(BLUE)Deleting all objects from /ex03...$(RESET)"; else \
 	echo "No objects to remove from /ex02."; \
 	fi;
 
@@ -146,8 +146,8 @@ clean:
 fclean: clean
 	@if [ -f "$(NAME)" ]; then \
 	rm -f $(NAME); \
-	echo "$(BLUE)Deleting $(NAME) from ex02...$(RESET)"; else \
-	echo "No Executable to remove from ex02."; \
+	echo "$(BLUE)Deleting $(NAME) from ex03...$(RESET)"; else \
+	echo "No Executable to remove from ex03."; \
 	fi;
 
 # re rule

@@ -103,12 +103,13 @@ all: $(NAME)
 	@printf "\n"
 	@printf "$(GREEN)             _______ _______            ___            __     __    \n$(RESET)"
 	@printf "$(GREEN).-----.--.--|   _   |   _   |   .-----.'  _|   .----._|  |_ _|  |_  \n$(RESET)"
-	@printf "$(GREEN)|  -__|_   _|.  |   |.  |   |   |  _  |   _|   |  __|_    _|_    _| \n$(RESET)"
-	@printf "$(GREEN)|_____|__.__|.  |   |.  |   |   |_____|__|     |____| |__|   |__|   \n$(RESET)"
-	@printf "$(GREEN)            |:  1   |:  1   |										  \n$(RESET)"
-	@printf "$(GREEN)            |::.. . |::.. . |										  \n$(RESET)"
-	@printf "$(GREEN)            '-------'-------'							  			  \n$(RESET)"	
+	@printf "$(GREEN)|  -__|_   _|.  |   |___|   |   |  _  |   _|   |  __|_    _|_    _| \n$(RESET)"
+	@printf "$(GREEN)|_____|__.__|.  |   |_(__   | 	|_____|__|     |____| |__|   |__|   \n$(RESET)"
+	@printf "$(GREEN)            |:  1   |:  1   |									   \n$(RESET)"
+	@printf "$(GREEN)            |::.. . |::.. . |									   \n$(RESET)"
+	@printf "$(GREEN)            '-------'-------'							  	       \n$(RESET)"	
 	@printf "\n"
+#font: cricket
 
 
 
@@ -133,16 +134,16 @@ $(OBJF):
 clean:
 	@if [ -d "$(OBJ_DIR)" ]; then \
 	rm -rf $(OBJ_DIR); \
-	echo "$(BLUE)Deleting all objects from /ex00...$(RESET)"; else \
-	echo "No objects to remove from /ex02."; \
+	echo "$(BLUE)Deleting all objects from /ex03...$(RESET)"; else \
+	echo "No objects to remove from /ex03."; \
 	fi;
 
 # fclean rule
 fclean: clean
 	@if [ -f "$(NAME)" ]; then \
 	rm -f $(NAME); \
-	echo "$(BLUE)Deleting $(NAME) from ex02...$(RESET)"; else \
-	echo "No Executable to remove from ex02."; \
+	echo "$(BLUE)Deleting $(NAME) from ex03...$(RESET)"; else \
+	echo "No Executable to remove from ex03."; \
 	fi;
 
 # re rule

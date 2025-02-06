@@ -1,6 +1,6 @@
 
 # variables
-NAME = fixed
+NAME = Animal
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -89,7 +89,7 @@ BG_HI_WHITE	=	\033[0;107m
 
 #Sources
 
-SRC_FILES	=	main Fixed
+SRC_FILES	=	main AAnimal Dog Cat WrongAnimal WrongCat WrongDog Brain
 
 SRCS 		= 	$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -102,14 +102,14 @@ OBJF		=	.cache_exists
 all: $(NAME)
 	@printf "\n"
 	@printf "$(GREEN)             _______ _______            ___            __     __    \n$(RESET)"
-	@printf "$(GREEN).-----.--.--|   _   |   _   |   .-----.'  _|   .----._|  |_ _|  |_  \n$(RESET)"
-	@printf "$(GREEN)|  -__|_   _|.  |   |.  |   |   |  _  |   _|   |  __|_    _|_    _| \n$(RESET)"
-	@printf "$(GREEN)|_____|__.__|.  |   |.  |   |   |_____|__|     |____| |__|   |__|   \n$(RESET)"
-	@printf "$(GREEN)            |:  1   |:  1   |										  \n$(RESET)"
-	@printf "$(GREEN)            |::.. . |::.. . |										  \n$(RESET)"
-	@printf "$(GREEN)            '-------'-------'							  			  \n$(RESET)"	
+	@printf "$(GREEN).-----.--.--|   _   |       |   .-----.'  _|   .----._|  |_ _|  |_  \n$(RESET)"
+	@printf "$(GREEN)|  -__|_   _|.  |   |___|   |   |  _  |   _|   |  __|_    _|_    _| \n$(RESET)"
+	@printf "$(GREEN)|_____|__.__|.  |   |/  ___/  	|_____|__|     |____| |__|   |__|   \n$(RESET)"
+	@printf "$(GREEN)            |:  1   |:  1  \									   \n$(RESET)"
+	@printf "$(GREEN)            |::.. . |::.. . |									   \n$(RESET)"
+	@printf "$(GREEN)            '-------'-------'							  	       \n$(RESET)"	
 	@printf "\n"
-
+#font: cricket
 
 
 # compile the executable
@@ -133,25 +133,20 @@ $(OBJF):
 clean:
 	@if [ -d "$(OBJ_DIR)" ]; then \
 	rm -rf $(OBJ_DIR); \
-	echo "$(BLUE)Deleting all objects from /ex00...$(RESET)"; else \
-	echo "No objects to remove from /ex00."; \
+	echo "$(BLUE)Deleting all objects from /ex02...$(RESET)"; else \
+	echo "No objects to remove from /ex02."; \
 	fi;
 
 # fclean rule
 fclean: clean
 	@if [ -f "$(NAME)" ]; then \
 	rm -f $(NAME); \
-	echo "$(BLUE)Deleting $(NAME) from ex00...$(RESET)"; else \
-	echo "No Executable to remove from ex00."; \
+	echo "$(BLUE)Deleting $(NAME) from ex02...$(RESET)"; else \
+	echo "No Executable to remove from ex02."; \
 	fi;
 
 # re rule
 re: fclean all
 
-git::
-	@git add .
-	@git commit -m "update"
-	@git push origin main
-
 #phony
-.PHONY: all clean fclean re git
+.PHONY: all clean fclean re

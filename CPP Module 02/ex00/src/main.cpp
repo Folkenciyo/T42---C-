@@ -29,37 +29,60 @@ int main(void)
 }
 
 
-/* Ex00 : Fixed Point vs Floating Point
-Imagine,having a ruler that can measure lengths in centimeters. A fixed point number is like marking a specific number of divisions on the ruler, say 10, and using them to measure any length. For example, if you want to measure 3.5 cm, you would use the 3rd and the 5th division on the ruler. If you want to measure 12.7 cm, you would use the 12th and the 7th division on the ruler. The number of divisions you use is fixed, and you can only measure lengths that are multiples of 0.1 cm.
+/* 
+Ex00 : Fixed Point vs Floating Point (Punto Fijo vs Punto Flotante)
 
-A floating point number is like marking a variable number of divisions on the ruler, depending on how precise you want to be. For example, if you want to measure 3.14159 cm, you would use 5 divisions on the ruler, each representing 0.00001 cm. If you want to measure 123456789 cm, you would use 9 divisions on the ruler, each representing 10000000 cm. The number of divisions you use is variable, and you can measure lengths that are not multiples of any fixed unit.
+Imagina tener una regla que puede medir longitudes en centímetros. Un número de punto fijo
+es como marcar un número específico de divisiones en la regla, digamos 10, y usarlas para 
+medir cualquier longitud. Por ejemplo, si quieres medir 3.5 cm, usarías la 3ª y la 5ª división
+en la regla. Si quieres medir 12.7 cm, usarías la 12ª y la 7ª división en la regla. El número 
+de divisiones que usas es fijo, y solo puedes medir longitudes que sean múltiplos de 0.1 cm.
 
-In C++, fixed point numbers are not directly supported by the language, but you can simulate them using integers and scaling factors. For example, if you want to represent a fixed point number with 4 digits after the decimal point, you can use an integer and multiply it by 10000. For example:
+Un número de punto flotante es como marcar un número variable de divisiones en la regla, dependiendo 
+de cuán preciso quieras ser. Por ejemplo, si quieres medir 3.14159 cm, usarías 5 divisiones en 
+la regla, cada una representando 0.00001 cm. Si quieres medir 123456789 cm, usarías 9 divisiones en 
+la regla, cada una representando 10000000 cm. El número de divisiones que usas es variable, y puedes
+medir longitudes que no sean múltiplos de ninguna unidad fija.
 
-int x = 1234; // represents 0.1234
-int y = 5678; // represents 0.5678
-int z = x + y; // represents 0.6912
+En C++, los números de punto fijo no son directamente soportados por el lenguaje, pero puedes 
+simularlos usando enteros y factores de escala. Por ejemplo, si quieres representar un número 
+de punto fijo con 4 dígitos después del punto decimal, puedes usar un entero y multiplicarlo 
+por 10000. Por ejemplo:
 
-Floating point numbers are supported by the language using types such as float and double. These types store the number (called the mantissa or significand) and the position of the decimal point (called the exponent) separately in binary format. For example:
+int x = 1234; // representa 0.1234
+int y = 5678; // representa 0.5678
+int z = x + y; // representa 0.6912
 
-float x = 3.14159; // stored as (1.570795 x 2^1) + (1 x 2^-20)
-float y = 123456789; // stored as (1.4656613 x 2^26) + (1 x 2^-3)
-float z = x + y; // stored as (1.4656613 x 2^26) + (1 x 2^-3) + (1.570795 x 2^1) + (1 x 2^-20)
-The advantage of floating point numbers is that they can represent a wider range of values with different levels of precision. The disadvantage is that they are not exact and may introduce rounding errors or loss of accuracy.
+Los números de punto flotante son soportados por el lenguaje usando tipos como float y double. Estos
+tipos almacenan el número (llamado la mantisa o significando) y la posición del punto 
+decimal (llamado el exponente) por separado en formato binario. Por ejemplo:
 
-USE CASES:
+float x = 3.14159; // almacenado como (1.570795 x 2^1) + (1 x 2^-20)
+float y = 123456789; // almacenado como (1.4656613 x 2^26) + (1 x 2^-3)
+float z = x + y; // almacenado como (1.4656613 x 2^26) + (1 x 2^-3) + (1.570795 x 2^1) + (1 x 2^-20)
+La ventaja de los números de punto flotante es que pueden representar un rango más amplio de valores con 
+diferentes niveles de precisión. La desventaja es que no son exactos y pueden introducir errores de redondeo 
+o pérdida de precisión.
 
-Fixed point numbers:
+CASOS DE USO:
 
-Financial applications, such as accounting, banking, or taxation, where the exact representation of money values is important.
-Embedded systems, such as microcontrollers or digital signal processors, where speed, power consumption, and chip area are critical factors.
-Audio and video processing, such as compression, filtering, or mixing, where fixed point arithmetic can provide better performance and quality than floating point arithmetic.
+Números de punto fijo:
 
-Floating point numbers:
+Aplicaciones financieras, como contabilidad, banca o impuestos, donde la representación exacta de los 
+valores monetarios es importante.
+Sistemas embebidos, como microcontroladores o procesadores de señal digital, donde la velocidad, el 
+consumo de energía y el área del chip son factores críticos.
+Procesamiento de audio y video, como compresión, filtrado o mezcla, donde la aritmética de punto 
+fijo puede proporcionar mejor rendimiento y calidad que la aritmética de punto flotante.
 
-Scientific and engineering applications, such as physics, chemistry, biology, or astronomy, where very small or very large values need to be represented and manipulated.
-Graphics and gaming applications, such as rendering, animation, or simulation, where floating point arithmetic can provide more realistic and dynamic effects than fixed-point arithmetic.
-Machine learning and artificial intelligence applications, such as neural networks, deep learning, or natural language processing, where floating point arithmetic can provide more flexibility and accuracy than fixed-point arithmetic.
-If you find any mistakes feel free to contact me through email: mabbas@students.42wolfsburg.de or slack “mabbas”
+Números de punto flotante:
+
+Aplicaciones científicas e ingenieriles, como física, química, biología o astronomía, donde se necesitan 
+representar y manipular valores muy pequeños o muy grandes.
+Aplicaciones de gráficos y juegos, como renderizado, animación o simulación, donde la aritmética de punto 
+flotante puede proporcionar efectos más realistas y dinámicos que la aritmética de punto fijo.
+Aplicaciones de aprendizaje automático e inteligencia artificial, como redes neuronales, 
+aprendizaje profundo o procesamiento de lenguaje natural, donde la aritmética de punto flotante puede 
+proporcionar más flexibilidad y precisión que la aritmética de punto fijo.
 
  */
