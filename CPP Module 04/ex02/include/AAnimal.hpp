@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
+
 #include <iostream>
 #include <string>
 
@@ -35,3 +37,5 @@ class AAnimal
     protected:
         str _type;
 };
+
+#endif

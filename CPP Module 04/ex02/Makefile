@@ -96,8 +96,6 @@ OBJS 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 ###
 
-OBJF		=	.cache_exists
-
 #all rule
 all: $(NAME)
 	@printf "\n"
@@ -121,13 +119,13 @@ $(NAME): $(OBJS)
 # compile objects
 $(OBJ_DIR)%.o:$(SRC_DIR)%.cpp | $(OBJF)
 	@echo "$(YELLOW)Compiling [$@]...$(RESET)"
+	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ -c $<
 	@printf "$(UP)$(CUT)"
 	@echo "$(GREEN)Finished [$@]$(RESET)"
 	@printf "$(UP)$(CUT)"
 
-$(OBJF):
-		@mkdir -p $(OBJ_DIR)
+
 
 # clean rule
 clean:

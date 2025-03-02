@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef WRONGDOG_HPP
+# define WRONGDOG_HPP
 
 #include "WrongAnimal.hpp"
 
@@ -26,3 +27,5 @@ class WrongDog : public WrongAnimal {
 	private:
 		str		_type;
 };
+
+#endif

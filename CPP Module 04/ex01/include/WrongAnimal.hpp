@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 #include <iostream>
 #include <string>
@@ -32,3 +33,5 @@ class WrongAnimal {
 	protected:
 		str	_type;
 };
+
+#endif
