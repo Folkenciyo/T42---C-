@@ -20,11 +20,13 @@ typedef std::string str;
 
 class AAnimal
 {
-    public:
-    // Constructors & Destructor
+    protected:
+        str _type;
         AAnimal(str type);
         AAnimal();
         AAnimal(const AAnimal &copy);
+    public:
+    // Constructors & Destructor
         virtual ~AAnimal();
     // Operator
         AAnimal &operator=(AAnimal const &rSym);
@@ -34,8 +36,6 @@ class AAnimal
     // Member Functions
         virtual void	makeSound() const;
         virtual void	think() const;
-    protected:
-        str _type;
 };
 
 #endif
