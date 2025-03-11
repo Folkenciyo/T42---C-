@@ -1,0 +1,8 @@
+# Ignorar archivos de objeto
+*.o
+
+# Ignorar la carpeta .vscode
+.vscode/
+
+# Ignorar la carpeta obj y todas sus subcarpetas
+obj/
