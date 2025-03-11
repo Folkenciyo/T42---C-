@@ -117,7 +117,7 @@ $(NAME): $(OBJS)
 	@echo "$(GREEN)Finished [$(NAME)]$(RESET)"
 
 # compile objects
-$(OBJ_DIR)%.o:$(SRC_DIR)%.cpp | $(OBJF)
+$(OBJ_DIR)%.o:$(SRC_DIR)%.cpp 
 	@echo "$(YELLOW)Compiling [$@]...$(RESET)"
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -I $(INC_DIR) -o $@ -c $<
